@@ -33,4 +33,13 @@ int main(void){
     }
 
     return 0;
+
+    /*
+    void insere (struct frutas * fruta, char * nome){
+        struct frutas * novafruta = (struct frutas*) malloc(sizeof(struct frutas));
+        strcpy(novafruta->nome, nome);
+        novafruta->prox = fruta; // insere no inicio
+        return novafruta;
+    }
+    */
 }
