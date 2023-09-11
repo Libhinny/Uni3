@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-//lista encadeada
-
 typedef struct frutas{
     char nome[10];
     struct frutas *prox;
