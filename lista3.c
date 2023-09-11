@@ -5,22 +5,22 @@
 typedef struct frutas{
     char nome[10];
     struct frutas *prox;
-};
+}Fruta;
 
-insere (struct frutas * fruta, char * nome){
-    struct frutas * novafruta = (struct frutas*) malloc(sizeof(struct frutas));
+Fruta *insere (struct frutas * fruta, char * nome){
+    Fruta * novafruta = (struct frutas*) malloc(sizeof(struct frutas));
     strcpy(novafruta->nome, nome);
     novafruta->prox = fruta; // insere no inicio
     return novafruta;
 }
 
 int main(void){
-    struct frutas * lista = NULL;
+    Fruta * lista = NULL;
     lista = insere(lista, "maca");
     lista = insere(lista, "abacate");
     lista = insere(lista, "uva");
 
-    struct frutas *p;
+    Fruta *p;
 
     for(p = lista; p!= NULL; p = p->prox){
         printf("%s\n", p->nome);
