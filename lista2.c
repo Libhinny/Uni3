@@ -6,13 +6,13 @@
 
 typedef struct frutas{
     char nome[10];
-    ListaFrutas *prox;
+    struct frutas *prox;
 }ListaFrutas;
 
 int main(void){
-    struct frutas *fruta1 = malloc(sizeof(ListaFrutas));
-    struct frutas *fruta2 = malloc(sizeof(ListaFrutas));
-    struct frutas *fruta3 = malloc(sizeof(ListaFrutas));
+    ListaFrutas *fruta1 = (ListaFrutas*)malloc(sizeof(ListaFrutas));
+    ListaFrutas *fruta2 = (ListaFrutas*)malloc(sizeof(ListaFrutas));
+    ListaFrutas *fruta3 = (ListaFrutas*)malloc(sizeof(ListaFrutas));
 
     // inicializa os nomes das frutas
 
@@ -32,14 +32,9 @@ int main(void){
         printf("%s\n", p->nome);
     }
 
-    return 0;
+    free(fruta1);
+    free(fruta2);
+    free(fruta3);
 
-    /*
-    void insere (struct frutas * fruta, char * nome){
-        struct frutas * novafruta = (struct frutas*) malloc(sizeof(struct frutas));
-        strcpy(novafruta->nome, nome);
-        novafruta->prox = fruta; // insere no inicio
-        return novafruta;
-    }
-    */
+    return 0;
 }
