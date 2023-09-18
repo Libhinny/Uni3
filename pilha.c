@@ -41,11 +41,11 @@ float pilha_pop(Pilha* p){
     return v;
 }
 
-void pilha_libera(Pilha* p){
+void pilha_libera(Pilha* p){ // liberação da memória
     free(p);
 }
 
-void imprime_pilha(Pilha* p){
+void imprime_pilha(Pilha* p){ // imprime os valores dentro do vetor
     int count;
     for(count = p->n-1; count >= 0; count--){
         printf("Os valores presentes na pilha são: %.2f \n", p->vet[count]);
