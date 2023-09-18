@@ -2,23 +2,32 @@
 #include <stdlib.h>
 #include "pilha.c"
 
+#define N 50
+
 int main(void){
 
-    Pilha* vetor, *n;
-    pilha_cria;
-    
+    Pilha* vetor = pilha_cria(N);
     float v;
 
     printf("Informe os elementos para serem adicionados no vetor: \n");
 
-    for (int i = 0; i < v; i++){
-        scanf("%f", vetor->vet[i]);
+    while (1){
+        printf("Elemento ou -1 para encerrar: \n");
+        scanf("%f", &v);
+        
+        if (v == -1){
+            break;
+        }
+
+        pilha_push(vetor, v);
     }
 
-    pilha_push(vetor, v);
-    pilha_pop(vetor);
+    printf("\n Elementos removidos da pilha: \n");
+    while (!pilha_vazia(vetor)){
+        printf("%.2f\n", pilha_pop(vetor));
+    }
+
     pilha_libera(vetor);
-    imprime_pilha(vetor);
 
     return 0;
 }
