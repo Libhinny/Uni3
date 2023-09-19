@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "pilha.c"
+#include "pilha.h"
 
-#define N 50
 
 int main(void){
 
