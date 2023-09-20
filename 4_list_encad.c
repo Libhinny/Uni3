@@ -79,8 +79,8 @@ int main (void){
     printf("Lista original: \n");
     imprime(&listagem);
 
-    int valorN = 20;
-    listagem = retira_n(&listagem, valorN);
+    int valorN = 50;
+    retira_n(&listagem, valorN);
 
     printf("Lista com %d removido: \n", valorN);
     imprime(&listagem);
