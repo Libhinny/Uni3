@@ -8,6 +8,11 @@ struct pilha {
     float *vet;
 };
 
+struct topo {
+    Pilha* top;
+    Pilha* prim;
+};
+
 Pilha* pilha_cria(void){
     int capacidade;
     Pilha* p = (Pilha*) malloc(capacidade*sizeof(Pilha));
@@ -56,5 +61,15 @@ void pilha_libera(Pilha* p){ // liberação da memória
 
 
 float topo(Pilha* p){
+
+}
+
+void concatena_pilhas(Pilha* p1, Pilha* p2){
+    Pilha* ant = NULL;
+    Pilha* p = p1;
+    while (p != NULL){
+        ant = p;
+        p = p->proximo;
+    }
 
 }

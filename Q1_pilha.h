@@ -3,6 +3,7 @@ TAD: Pilha de valores reais
 */
 
 typedef struct pilha Pilha;
+typedef struct topo Topo;
 
 // Função que cria a pilha fazendo alocação na memoria
 Pilha* pilha_cria(void);
