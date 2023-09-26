@@ -3,6 +3,7 @@ TAD: fila de valores reais
 */
 
 typedef struct fila Fila;
+typedef struct lista Lista;
 
 // função que cria a fila 
 Fila * fila_cria(void);
